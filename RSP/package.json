@@ -1,10 +1,10 @@
 {
-  "name": "word-relay",
+  "name": "rock-scissors-paper",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack"
+    "dev": "webpack serve --env development"
   },
   "author": "moonhopark",
   "license": "ISC",
