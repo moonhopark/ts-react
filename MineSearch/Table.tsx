@@ -1,19 +1,20 @@
 import * as React from 'react';
-import { useMemo, FunctionComponent, Dispatch } from 'react';
+import { useContext } from 'react';
 
+import { TableContext } from './MineSearch';
 import Tr from './Tr';
 
-interface Props {
-  tableData: string[][];
-  dispatch: Dispatch<any>;
-  onClick: () => void;
-}
-const Table: FunctionComponent<Props> = ({ tableData, dispatch, onClick }) => {
+const Table = () => {
+  const { tableData } = useContext(TableContext);
   return (
     <table>
-      {Array(tableData.length)
-        .fill(null)
-        .map((tr, i) => useMemo(() => <Tr key={i} dispatch={dispatch} rowIndex={i} rowData={tableData[i]} />, [tableData[i]]))}
+      <tbody>
+        {Array(tableData.length)
+          .fill(null)
+          .map((tr, i) => (
+            <Tr key={i} rowIndex={i} />
+          ))}
+      </tbody>
     </table>
   );
 };
