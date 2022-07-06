@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
-import RSP from './RSP';
+import TicTacToe from './TicTacToe';
 
-ReactDom.render(<RSP />, document.querySelector('#root'));
+ReactDom.render(<TicTacToe />, document.querySelector('#root'));
