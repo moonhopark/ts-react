@@ -19,7 +19,7 @@ const NumberBaseball = () => {
   const [value, setValue] = useState('');
   const [result, setResult] = useState('');
   const [tries, setTries] = useState<TryInfo[]>([]);
-  const inputEl = useRef<HTMLInputElement>(null);
+  const inputEl = useRef<HTMLInputElement | null>(null);
 
   const onSubmitForm = useCallback<(e: React.FormEvent) => void>(
     (e) => {
